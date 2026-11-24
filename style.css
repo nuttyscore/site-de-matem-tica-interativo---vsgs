@@ -1,30 +1,135 @@
+/* Importa fontes estilosas do Google Fonts: Orbitron (futurista) e Outfit (moderna) */
+@import url('https://googleapis.com');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
+    background: radial-gradient(circle at top, #1b1448 0%, #0b091e 100%);
+    color: #f8fafc;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .container {
-    max-width: 500px;
-    margin: 50px auto;
-    background: white;
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(139, 92, 246, 0.25);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #00f5d4, #00bbf9, #9b5de5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+p {
+    color: #cbd5e1;
+    font-size: 16px;
+}
+
+/* Caixa da conta matemática com destaque neon */
+#pergunta {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: #00f5d4;
+    background: rgba(11, 9, 30, 0.7);
+    border: 2px solid #00f5d4;
+    box-shadow: 0 0 20px rgba(0, 245, 212, 0.25);
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    margin: 25px 0;
+    letter-spacing: 3px;
 }
 
+/* Botões com degradê vibrante e animação */
 button {
-    margin: 10px 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 8px 6px;
+    padding: 14px 26px;
+    font-size: 14px;
     cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7b2cbf, #f72585);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(247, 37, 133, 0.4);
+    transition: all 0.25s ease;
 }
 
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(247, 37, 133, 0.7);
+    filter: brightness(1.1);
+}
+
+button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Campo para digitar a resposta */
 input {
-    padding: 10px;
-    font-size: 16px;
-    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    padding: 14px;
+    font-size: 20px;
+    margin: 10px 0 15px 0;
     width: 80%;
+    background: rgba(11, 9, 30, 0.8);
+    color: #ffffff;
+    border: 2px solid rgba(155, 93, 229, 0.5);
+    border-radius: 12px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #64748b;
+}
+
+input:focus {
+    border-color: #00f5d4;
+    box-shadow: 0 0 15px rgba(0, 245, 212, 0.4);
+}
+
+/* Mensagem de acerto ou erro */
+#resultado {
+    font-weight: 700;
+    font-size: 19px;
+    min-height: 28px;
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+/* Destaque para o número da pontuação */
+#pontuacao {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #fee440;
+    text-shadow: 0 0 10px rgba(254, 228, 64, 0.5);
 }
